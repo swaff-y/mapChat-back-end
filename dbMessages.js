@@ -7,4 +7,5 @@ const mapChatSchema = mongoose.Schema({
   received: Boolean
 });
 
-export default mongoose.model('messageContent', mapChatSchema)
+//collection
+export default mongoose.model('messagecontents', mapChatSchema)
