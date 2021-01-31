@@ -2,7 +2,7 @@
 // Use import like this add "type": "module" to package.json
 import express from 'express';
 import mongoose from 'mongoose';
-import Messages from "./dbMessages.js";
+import Messages from "./models/dbMessages.js";
 import Pusher from 'pusher';
 import cors from 'cors';
 
@@ -51,6 +51,7 @@ db.once('open', ()=>{
         name: messageDetails.name,
         message: messageDetails.message,
         timestamp: messageDetails.timestamp,
+        received: messageDetails.received
       });
     }else{
       console.log('Error triggering Pusher');
