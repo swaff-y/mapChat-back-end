@@ -2,9 +2,10 @@
 // Use import like this add "type": "module" to package.json
 import express from 'express';
 import mongoose from 'mongoose';
-import Messages from "./models/dbMessages.js";
+// import Messages from "./models/dbMessages.js";
 // const messagesController = require('./controllers/messagesController');
-// import messagesController from './controllers/messagesController.js';
+import {syncMessage,newMessage} from './controllers/messagesController.js';
+import {syncRoom} from './controllers/roomsController.js';
 import Pusher from 'pusher';
 import cors from 'cors';
 
@@ -64,31 +65,32 @@ db.once('open', ()=>{
 //api routes
 app.get('/',(req,res)=>res.status(200).send('Hello World'));
 
-// app.get('/messages/sync/:room', messagesController.syncMessage );
+ app.get('/messages/sync/:room', syncMessage );
+ app.get('/rooms/sync/:user', syncRoom );
 
-// app.post('/messages/new', messagesController.new );
+ app.post('/messages/new', newMessage );
 
-app.get('/messages/sync/:room', (req,res) => {
-  Messages.find((err,data) => {
-    if( err ){
-      res.status(500).send(err);
-    }else{
-      res.status(200).send(data);
-    }
-  })
-});
+// app.get('/messages/sync/:room', (req,res) => {
+//   Messages.find((err,data) => {
+//     if( err ){
+//       res.status(500).send(err);
+//     }else{
+//       res.status(200).send(data);
+//     }
+//   })
+// });
+// //
+// app.post('/messages/new', (req,res) => {
+//   const dbMessage = req.body;
 //
-app.post('/messages/new', (req,res) => {
-  const dbMessage = req.body;
-
-  Messages.create(dbMessage, (err,data) => {
-    if(err){
-      res.status(500).send(err)
-    }else{
-      res.status(201).send(data)
-    }
-  })
-})
+//   Messages.create(dbMessage, (err,data) => {
+//     if(err){
+//       res.status(500).send(err)
+//     }else{
+//       res.status(201).send(data)
+//     }
+//   })
+// })
 
 //listener
 app.listen(port,()=> console.log(`Listening on localhost:${port}`));

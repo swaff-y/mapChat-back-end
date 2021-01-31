@@ -1,40 +1,28 @@
-import Messages from "./models/dbMessages.js";
+import Messages from "../models/dbMessages.js";
 
-module.exports = {
-  syncMessage(req,res){
+const syncMessage = async (req,res) => {
 
-    app.get('/messages/sync/:room', (req,res) => {
-      Messages.find((err,data) => {
-        if( err ){
-          res.status(500).send(err);
-        }else{
-          res.status(200).send(data);
-        }
-      })
+  try{
+    const messages = await Messages.find({
+      room: req.params.room
     });
+    console.log("The message: ", messages);
+    res.json(messages);
+  }catch(err){
+    res.status(500).send(err);
+  }
+}
 
-    // try(
-    //   const messages = await Messages.find({
-    //     room: {
-    //       name: req.params.room
-    //     }
-    //   });
-    //   res.json(messages);
-    // )catch(err){
-    //   res.status(500).send(err);
-    // }
+const newMessage = (req,res) => {
+  const dbMessage = req.body;
 
+  Messages.create(dbMessage, (err,data) => {
+    if(err){
+      res.status(500).send(err)
+    }else{
+      res.status(201).send(data)
+    }
+  })
+} //new
 
-  }, //sync
-  newMessage(req,res){
-    const dbMessage = req.body;
-
-    Messages.create(dbMessage, (err,data) => {
-      if(err){
-        res.status(500).send(err)
-      }else{
-        res.status(201).send(data)
-      }
-    })
-  } //new
-};
+export {syncMessage,newMessage};
