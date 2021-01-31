@@ -33,19 +33,32 @@ const users = [
 const rooms = [
   {
     name: "SEI40",
-    participants: ["Swaff-y","Bernie"],
+    participants: [
+      {name: "Swaff-y"},
+      {name: "Bernie"}
+    ],
   },
   {
     name: "Hunting",
-    participants: ["Swaff-y","Chap","Chris"],
+    participants: [
+      {name: "Swaff-y"},
+      {name: "Chap"},
+      {name: "Chris"}
+    ],
   },
   {
     name: "Safari",
-    participants: ["Bernie", "Chap"],
+    participants: [
+      {name: "Bernie"},
+      {name: "Chap"}
+    ],
   },
   {
     name: "Fishing",
-    participants: ["Swaff-y","Chris"],
+    participants: [
+      {name: "Swaff-y"},
+      {name: "Chris"}
+    ],
   },
 ];
 
@@ -130,7 +143,7 @@ db.once('open', async()=>{
     console.log('Users', usersResults);
     console.log('Rooms', roomResults);
     console.log('Messages', messageResults);
-  }catch{
+  }catch(err){
     console.log('Error seeding DB:', err);
   }
 

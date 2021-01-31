@@ -3,6 +3,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Messages from "./models/dbMessages.js";
+// const messagesController = require('./controllers/messagesController');
+// import messagesController from './controllers/messagesController.js';
 import Pusher from 'pusher';
 import cors from 'cors';
 
@@ -48,10 +50,10 @@ db.once('open', ()=>{
     if(change.operationType === 'insert'){
       const messageDetails = change.fullDocument;
       pusher.trigger('messages', 'inserted',{
-        name: messageDetails.name,
         message: messageDetails.message,
+        name: messageDetails.name,
         timestamp: messageDetails.timestamp,
-        received: messageDetails.received
+        room: messageDetails.room
       });
     }else{
       console.log('Error triggering Pusher');
@@ -62,7 +64,11 @@ db.once('open', ()=>{
 //api routes
 app.get('/',(req,res)=>res.status(200).send('Hello World'));
 
-app.get('/messages/sync', (req,res) => {
+// app.get('/messages/sync/:room', messagesController.syncMessage );
+
+// app.post('/messages/new', messagesController.new );
+
+app.get('/messages/sync/:room', (req,res) => {
   Messages.find((err,data) => {
     if( err ){
       res.status(500).send(err);
@@ -71,7 +77,7 @@ app.get('/messages/sync', (req,res) => {
     }
   })
 });
-
+//
 app.post('/messages/new', (req,res) => {
   const dbMessage = req.body;
 
