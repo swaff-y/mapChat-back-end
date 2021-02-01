@@ -23,9 +23,10 @@ const newMessage = async (req,res) => {
 
   try{
     const rooms = await Rooms.update({name: room},{lastMessage: lastMessage});
+    const roomsPart = await Rooms.update({name: room, participants:[{name: req.body.name}]},{participants: [{lastMessage: lastMessage}]});
     const message = await Messages.create(dbMessage);
 
-    console.log("I was successful: ", rooms, message);
+    console.log("I was successful: ", rooms, roomsPart, message);
     res.json(message);
   }catch(err){
     res.status(500).send(err);

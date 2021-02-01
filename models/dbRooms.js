@@ -6,7 +6,8 @@ const RoomSchema = new mongoose.Schema({
   lastTimestamp: Number,
   participants: [
     {
-      name: String
+      name: String,
+      lastMessage: String
     }
   ]
 }); //Schema

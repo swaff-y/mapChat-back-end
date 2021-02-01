@@ -36,8 +36,8 @@ const rooms = [
     lastMessage: "Ah, nothing",
     lastTimestamp: 1611975814321,
     participants: [
-      {name: "Swaff-y"},
-      {name: "Bernie"}
+      {name: "Swaff-y", lastMessage: "What ya doing?"},
+      {name: "Bernie", lastMessage: "Ah, nothing"}
     ],
   },
   {
@@ -45,9 +45,9 @@ const rooms = [
     lastMessage: "Ah, nothing",
     lastTimestamp: 1611975814321,
     participants: [
-      {name: "Swaff-y"},
-      {name: "Chap"},
-      {name: "Chris"}
+      {name: "Swaff-y", lastMessage: "Ah, nothing"},
+      {name: "Chap", lastMessage: "Yeah, good thanks"},
+      {name: "Chris", lastMessage: "What ya doing?"}
     ],
   },
   {
