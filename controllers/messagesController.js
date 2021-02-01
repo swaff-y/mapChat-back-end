@@ -19,11 +19,17 @@ const newMessage = async (req,res) => {
   const lastMessage =req.body.message;
   const room =req.body.room;
 
-   // console.log("I'm working",room);
+    console.log("I'm working",req.body.name);
 
   try{
     const rooms = await Rooms.update({name: room},{lastMessage: lastMessage});
-    const roomsPart = await Rooms.update({name: room, participants:[{name: req.body.name}]},{participants: [{lastMessage: lastMessage}]});
+    const roomsPart = await Rooms.updateOne(
+      {name:room, "participants.name" : req.body.name},
+      { $set:
+        {
+          "participants.$.lastMessage":lastMessage
+        }
+      });
     const message = await Messages.create(dbMessage);
 
     console.log("I was successful: ", rooms, roomsPart, message);

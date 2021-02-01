@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 // import Messages from "./models/dbMessages.js";
 // const messagesController = require('./controllers/messagesController');
 import {syncMessage,newMessage} from './controllers/messagesController.js';
-import {syncRoom} from './controllers/roomsController.js';
+import {syncRoom,getRoom} from './controllers/roomsController.js';
 import Pusher from 'pusher';
 import cors from 'cors';
 
@@ -69,6 +69,7 @@ app.get('/',(req,res)=>res.status(200).send('Hello World'));
 
  app.get('/messages/sync/:room', syncMessage );
  app.get('/rooms/sync/:user', syncRoom );
+ app.get('/room/:name', getRoom );
 
  app.post('/messages/new', newMessage );
 

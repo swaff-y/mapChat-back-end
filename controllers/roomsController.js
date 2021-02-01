@@ -9,4 +9,15 @@ const syncRoom = async (req,res) => {
   }
 }
 
-export {syncRoom};
+const getRoom = async (req,res) => {
+
+  try{
+    const room = await Rooms.findOne({name:req.params.name});
+    res.json(room);
+  }catch(err){
+    res.status(500).send(err);
+  }
+}
+
+
+export {syncRoom,getRoom};
