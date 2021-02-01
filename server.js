@@ -43,6 +43,7 @@ db.once('open', ()=>{
   console.log('DB connected');
 
   const msgCollection = db.collection('messagecontents')
+  const roomCollection = db.collection('roomcontents')
   const changeStream = msgCollection.watch();
 
   changeStream.on('change', (change) => {
@@ -56,6 +57,7 @@ db.once('open', ()=>{
         timestamp: messageDetails.timestamp,
         room: messageDetails.room
       });
+
     }else{
       console.log('Error triggering Pusher');
     }

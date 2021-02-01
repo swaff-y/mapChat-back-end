@@ -14,23 +14,22 @@ const syncMessage = async (req,res) => {
   }
 }
 
-const newMessage = (req,res) => {
+const newMessage = async (req,res) => {
   const dbMessage = req.body;
   const lastMessage =req.body.message;
   const room =req.body.room;
 
-  // console.log("I'm working");
+   // console.log("I'm working",room);
 
-  Rooms.update({room: room},{lastMessage: lastMessage});
+  try{
+    const rooms = await Rooms.update({name: room},{lastMessage: lastMessage});
+    const message = await Messages.create(dbMessage);
 
-  Messages.create(dbMessage, (err,data) => {
-    if(err){
-      res.status(500).send(err)
-      // console.log("An error Happened");
-    }else{
-      res.status(201).send(data)
-    }
-  });
+    console.log("I was successful: ", rooms, message);
+    res.json(message);
+  }catch(err){
+    res.status(500).send(err);
+  }
 
 } //new
 
