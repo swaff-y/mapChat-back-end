@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const MessageSchema = new mongoose.Schema({
   message: String,
   name: String,
-  timestamp: Number,
+  timestamp: String,
   room: String
 }); //Schema
 

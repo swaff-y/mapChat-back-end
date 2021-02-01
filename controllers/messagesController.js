@@ -19,11 +19,14 @@ const newMessage = (req,res) => {
   const lastMessage =req.body.message;
   const room =req.body.room;
 
-  // Rooms.update({room: room},{lastMessage: lastMessage});
+  // console.log("I'm working");
+
+  Rooms.update({room: room},{lastMessage: lastMessage});
 
   Messages.create(dbMessage, (err,data) => {
     if(err){
       res.status(500).send(err)
+      // console.log("An error Happened");
     }else{
       res.status(201).send(data)
     }
