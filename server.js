@@ -40,6 +40,8 @@ mongoose.connect(connection_url,{
   useUnifiedTopology: true
 })
 const db = mongoose.connection
+
+
 db.once('open', ()=>{
   console.log('DB connected');
 
