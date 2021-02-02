@@ -77,31 +77,31 @@ const messages = [
     timestamp: 1611975812883,
     room: "SEI40",
     latitude: -33.7444722,
-    Longitude: 151.1404311
+    longitude: 151.1404311
   },
   {
     message: "Yeah, good thanks",
     name: "Bernie",
     timestamp: 1611975812976,
     room: "SEI40",
-    latitude: -34.7444722,
-    Longitude: 152.1404311
+    latitude: -33.6322342,
+    longitude: 151.1325421
   },
   {
     message: "What ya doing?",
     name: "Swaff-y",
     timestamp: 1611975813463,
     room: "SEI40",
-    latitude: -33.7444722,
-    Longitude: 151.1404311
+    latitude: -33.5231123,
+    longitude: 151.1243122
   },
   {
     message: "Ah, nothing",
     name: "Bernie",
     timestamp: 1611975814321,
     room: "SEI40",
-    latitude: -34.7444722,
-    Longitude: 152.1404311
+    latitude: -33.5823452,
+    longitude: 151.1345121
   },
   {
     message: "Hey, how are ya",
@@ -109,7 +109,7 @@ const messages = [
     timestamp: 1611975812883,
     room: "Hunting",
     latitude: -33.7444722,
-    Longitude: 151.1404311
+    longitude: 151.1404311
   },
   {
     message: "Yeah, good thanks",
@@ -117,7 +117,7 @@ const messages = [
     timestamp: 1611975812976,
     room: "Hunting",
     latitude: -32.7444722,
-    Longitude: 150.1404311
+    longitude: 150.1404311
   },
   {
     message: "What ya doing?",
@@ -125,7 +125,7 @@ const messages = [
     timestamp: 1611975813463,
     room: "Hunting",
     latitude: -30.7444722,
-    Longitude: 151.1404311
+    longitude: 151.1404311
   },
   {
     message: "Ah, nothing",
@@ -133,7 +133,7 @@ const messages = [
     timestamp: 1611975814321,
     room: "Hunting",
     latitude: -33.7444722,
-    Longitude: 151.1404311
+    longitude: 151.1404311
   }
 ];
 

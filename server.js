@@ -58,7 +58,9 @@ db.once('open', ()=>{
         message: messageDetails.message,
         name: messageDetails.name,
         timestamp: messageDetails.timestamp,
-        room: messageDetails.room
+        room: messageDetails.room,
+        latitude: messageDetails.latitude,
+        longitude: messageDetails.longitude
       });
 
     }else{
