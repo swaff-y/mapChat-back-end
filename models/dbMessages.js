@@ -6,7 +6,7 @@ const MessageSchema = new mongoose.Schema({
   timestamp: String,
   room: String,
   latitude: Number,
-  Longitude: Number
+  longitude: Number
 }); //Schema
 
 //collection
