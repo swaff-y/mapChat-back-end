@@ -1,8 +1,10 @@
 import Rooms from "../models/dbRooms.js";
 
 const syncRoom = async (req,res) => {
+
+
   try{
-    const rooms = await Rooms.find();
+    const rooms = await Rooms.find({"participants.name" : req.params.user });
     res.json(rooms);
   }catch(err){
     res.status(500).send(err);

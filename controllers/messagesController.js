@@ -17,12 +17,13 @@ const syncMessage = async (req,res) => {
 const newMessage = async (req,res) => {
   const dbMessage = req.body;
   const lastMessage =req.body.message;
+  const lastTimestamp =req.body.timestamp;
   const room =req.body.room;
 
     console.log("I'm working",req.body.name);
 
   try{
-    const rooms = await Rooms.update({name: room},{lastMessage: lastMessage});
+    const rooms = await Rooms.update({name: room},{lastMessage: lastMessage, lastTimestamp: lastTimestamp});
     const roomsPart = await Rooms.updateOne(
       {name:room, "participants.name" : req.body.name},
       { $set:

@@ -55,8 +55,8 @@ const rooms = [
     lastMessage: "",
     lastTimestamp: null,
     participants: [
-      {name: "Bernie"},
-      {name: "Chap"}
+      {name: "Bernie", lastMessage: ""},
+      {name: "Chap", lastMessage: ""}
     ],
   },
   {
@@ -64,8 +64,8 @@ const rooms = [
     lastMessage: "",
     lastTimestamp: null,
     participants: [
-      {name: "Swaff-y"},
-      {name: "Chris"}
+      {name: "Swaff-y", lastMessage: ""},
+      {name: "Chris", lastMessage: ""}
     ],
   },
 ];
