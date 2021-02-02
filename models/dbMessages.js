@@ -4,7 +4,9 @@ const MessageSchema = new mongoose.Schema({
   message: String,
   name: String,
   timestamp: String,
-  room: String
+  room: String,
+  latitude: Number,
+  Longitude: Number
 }); //Schema
 
 //collection
