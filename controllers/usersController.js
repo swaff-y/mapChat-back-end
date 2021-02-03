@@ -11,6 +11,17 @@ const syncUsers = async (req,res) => {
   }
 };
 
+const roomUser = async (req,res) => {
+
+  try{
+    const user = await User.update({name: req.params.user},{lastRoom:req.params.room });
+    res.json(user)
+  }catch(err){
+    res.status(500).send(err);
+  }
+
+}
+
 // const newMessage = async (req,res) => {
 //   const dbMessage = req.body;
 //   const lastMessage =req.body.message;
@@ -36,4 +47,4 @@ const syncUsers = async (req,res) => {
 //   }
 //} //new
 
-export {syncUsers};
+export {syncUsers,roomUser};

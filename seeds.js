@@ -11,22 +11,26 @@ const users = [
   {
     name: "Swaff-y",
     number: "0450123123",
-    email: "swaff@ga.co"
+    email: "swaff@ga.co",
+    lastRoom: "SEI40"
   },
   {
     name: "Bernie",
     number: "0450123123",
-    email: "bern@ga.co"
+    email: "bern@ga.co",
+    lastRoom: "SEI40"
   },
   {
     name: "Chap",
     number: "0450123123",
-    email: "chap@ga.co"
+    email: "chap@ga.co",
+    lastRoom: "Hunting"
   },
   {
     name: "Chris",
     number: "0450123123",
-    email: "chris@ga.co"
+    email: "chris@ga.co",
+    lastRoom: "Hunting"
   },
 ];
 

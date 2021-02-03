@@ -7,7 +7,7 @@ const syncMessage = async (req,res) => {
     const messages = await Messages.find({
       room: req.params.room
     });
-    // console.log("The message: ", messages);
+     console.log("The message*****: ", messages);
     res.json(messages);
   }catch(err){
     res.status(500).send(err);
