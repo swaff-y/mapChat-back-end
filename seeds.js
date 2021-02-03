@@ -84,9 +84,9 @@ const rooms = [
     lastTimestamp: 1611975814321,
     participants: [
       {name: "User1", lastMessage: "What ya doing?"},
-      {name: "User2", lastMessage: "Ah, nothing"}
+      {name: "User2", lastMessage: "Ah, nothing"},
       {name: "User3", lastMessage: "Ah, nothing"},
-      {name: "User4", lastMessage: "Ah, nothing"}
+      {name: "User4", lastMessage: "Ah, nothing"},
       {name: "User5", lastMessage: "Ah, nothing"},
     ],
   },
@@ -96,9 +96,9 @@ const rooms = [
     lastTimestamp: 1611975814321,
     participants: [
       {name: "User1", lastMessage: "What ya doing?"},
-      {name: "User2", lastMessage: "Ah, nothing"}
+      {name: "User2", lastMessage: "Ah, nothing"},
       {name: "User3", lastMessage: "Ah, nothing"},
-      {name: "User4", lastMessage: "Ah, nothing"}
+      {name: "User4", lastMessage: "Ah, nothing"},
       {name: "User5", lastMessage: "Ah, nothing"},
     ],
   },
@@ -108,11 +108,11 @@ const rooms = [
     lastTimestamp: 1611975814321,
     participants: [
       {name: "User1", lastMessage: "What ya doing?"},
-      {name: "User6", lastMessage: "Ah, nothing"}
+      {name: "User6", lastMessage: "Ah, nothing"},
       {name: "User7", lastMessage: "Ah, nothing"},
-      {name: "User8", lastMessage: "Ah, nothing"}
+      {name: "User8", lastMessage: "Ah, nothing"},
       {name: "User9", lastMessage: "Ah, nothing"},
-      {name: "User10", lastMessage: "Ah, nothing"}
+      {name: "User10", lastMessage: "Ah, nothing"},
       {name: "User11", lastMessage: "Ah, nothing"},
     ],
   },
