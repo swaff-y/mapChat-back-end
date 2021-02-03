@@ -9,28 +9,71 @@ const connection_url = 'mongodb+srv://admin:U43SH4qZRiSrDC6x@cluster0.l5wa7.mong
 
 const users = [
   {
-    name: "Swaff-y",
+    name: "User1",
     number: "0450123123",
-    email: "swaff@ga.co",
+    email: "email@ga.co",
     lastRoom: "SEI40"
   },
   {
-    name: "Bernie",
+    name: "User2",
     number: "0450123123",
-    email: "bern@ga.co",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+
+  {
+    name: "User3",
+    number: "0450123123",
+    email: "email@ga.co",
     lastRoom: "SEI40"
   },
   {
-    name: "Chap",
+    name: "User4",
     number: "0450123123",
-    email: "chap@ga.co",
-    lastRoom: "Hunting"
+    email: "email@ga.co",
+    lastRoom: "SEI40"
   },
   {
-    name: "Chris",
+    name: "User5",
     number: "0450123123",
-    email: "chris@ga.co",
-    lastRoom: "Hunting"
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+  {
+    name: "User6",
+    number: "0450123123",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+  {
+    name: "User7",
+    number: "0450123123",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+  {
+    name: "User8",
+    number: "0450123123",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+  {
+    name: "User9",
+    number: "0450123123",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+  {
+    name: "User10",
+    number: "0450123123",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
+  },
+  {
+    name: "User11",
+    number: "0450123123",
+    email: "email@ga.co",
+    lastRoom: "SEI40"
   },
 ];
 
@@ -40,105 +83,226 @@ const rooms = [
     lastMessage: "Ah, nothing",
     lastTimestamp: 1611975814321,
     participants: [
-      {name: "Swaff-y", lastMessage: "What ya doing?"},
-      {name: "Bernie", lastMessage: "Ah, nothing"}
+      {name: "User1", lastMessage: "What ya doing?"},
+      {name: "User2", lastMessage: "Ah, nothing"}
+      {name: "User3", lastMessage: "Ah, nothing"},
+      {name: "User4", lastMessage: "Ah, nothing"}
+      {name: "User5", lastMessage: "Ah, nothing"},
     ],
   },
   {
-    name: "Hunting",
+    name: "SEI40-Staff",
     lastMessage: "Ah, nothing",
     lastTimestamp: 1611975814321,
     participants: [
-      {name: "Swaff-y", lastMessage: "Ah, nothing"},
-      {name: "Chap", lastMessage: "Yeah, good thanks"},
-      {name: "Chris", lastMessage: "What ya doing?"}
+      {name: "User1", lastMessage: "What ya doing?"},
+      {name: "User2", lastMessage: "Ah, nothing"}
+      {name: "User3", lastMessage: "Ah, nothing"},
+      {name: "User4", lastMessage: "Ah, nothing"}
+      {name: "User5", lastMessage: "Ah, nothing"},
     ],
   },
   {
-    name: "Safari",
-    lastMessage: "",
-    lastTimestamp: null,
+    name: "SEI40-Students",
+    lastMessage: "Ah, nothing",
+    lastTimestamp: 1611975814321,
     participants: [
-      {name: "Bernie", lastMessage: ""},
-      {name: "Chap", lastMessage: ""}
-    ],
-  },
-  {
-    name: "Fishing",
-    lastMessage: "",
-    lastTimestamp: null,
-    participants: [
-      {name: "Swaff-y", lastMessage: ""},
-      {name: "Chris", lastMessage: ""}
+      {name: "User1", lastMessage: "What ya doing?"},
+      {name: "User6", lastMessage: "Ah, nothing"}
+      {name: "User7", lastMessage: "Ah, nothing"},
+      {name: "User8", lastMessage: "Ah, nothing"}
+      {name: "User9", lastMessage: "Ah, nothing"},
+      {name: "User10", lastMessage: "Ah, nothing"}
+      {name: "User11", lastMessage: "Ah, nothing"},
     ],
   },
 ];
 
 const messages = [
   {
-    message: "Hey, how are ya",
-    name: "Swaff-y",
+    message: "What ya doing?",
+    name: "User1",
     timestamp: 1611975812883,
     room: "SEI40",
-    latitude: -33.7444722,
-    longitude: 151.1404311
-  },
-  {
-    message: "Yeah, good thanks",
-    name: "Bernie",
-    timestamp: 1611975812976,
-    room: "SEI40",
-    latitude: -33.6322342,
-    longitude: 151.1325421
+    latitude: -33.745018,
+    longitude: 151.142471
   },
   {
     message: "What ya doing?",
-    name: "Swaff-y",
-    timestamp: 1611975813463,
-    room: "SEI40",
-    latitude: -33.5231123,
-    longitude: 151.1243122
-  },
-  {
-    message: "Ah, nothing",
-    name: "Bernie",
-    timestamp: 1611975814321,
-    room: "SEI40",
-    latitude: -33.5823452,
-    longitude: 151.1345121
-  },
-  {
-    message: "Hey, how are ya",
-    name: "Swaff-y",
+    name: "User1",
     timestamp: 1611975812883,
-    room: "Hunting",
-    latitude: -33.7444722,
-    longitude: 151.1404311
-  },
-  {
-    message: "Yeah, good thanks",
-    name: "Chap",
-    timestamp: 1611975812976,
-    room: "Hunting",
-    latitude: -32.7444722,
-    longitude: 150.1404311
+    room: "SEI40-Staff",
+    latitude: -33.745018,
+    longitude: 151.142471
   },
   {
     message: "What ya doing?",
-    name: "Chris",
-    timestamp: 1611975813463,
-    room: "Hunting",
-    latitude: -30.7444722,
-    longitude: 151.1404311
+    name: "User1",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.745018,
+    longitude: 151.142471
   },
   {
     message: "Ah, nothing",
-    name: "Swaff-y",
-    timestamp: 1611975814321,
-    room: "Hunting",
-    latitude: -33.7444722,
-    longitude: 151.1404311
-  }
+    name: "User2",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.677494,
+    longitude: 150.9160931
+  },
+  {
+    message: "Ah, nothing",
+    name: "User2",
+    timestamp: 1611975812883,
+    room: "SEI40-Staff",
+    latitude: -33.677494,
+    longitude: 150.916093
+  },
+  {
+    message: "Ah, nothing",
+    name: "User3",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.740188,
+    longitude: 150.864836
+  },
+  {
+    message: "Ah, nothing",
+    name: "User3",
+    timestamp: 1611975812883,
+    room: "SEI40-Staff",
+    latitude: -33.740188,
+    longitude: 150.864836
+  },
+  {
+    message: "Ah, nothing",
+    name: "User4",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.881083,
+    longitude: 151.272301
+  },
+  {
+    message: "Ah, nothing",
+    name: "User4",
+    timestamp: 1611975812883,
+    room: "SEI40-Staff",
+    latitude: -33.881083,
+    longitude: 151.272301
+  },
+  {
+    message: "Ah, nothing",
+    name: "User5",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.859342,
+    longitude: 151.155157
+  },
+  {
+    message: "Ah, nothing",
+    name: "User5",
+    timestamp: 1611975812883,
+    room: "SEI40-Staff",
+    latitude: -33.859342,
+    longitude: 151.155157
+  },
+  {
+    message: "Ah, nothing",
+    name: "User6",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.851532,
+    longitude: 151.032883
+  },
+  {
+    message: "Ah, nothing",
+    name: "User6",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.851532,
+    longitude: 151.032883
+  },
+  {
+    message: "Ah, nothing",
+    name: "User7",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.765675,
+    longitude: 151.162506
+  },
+  {
+    message: "Ah, nothing",
+    name: "User7",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.765675,
+    longitude: 151.162506
+  },
+  {
+    message: "Ah, nothing",
+    name: "User8",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.758883,
+    longitude: 151.29547
+  },
+  {
+    message: "Ah, nothing",
+    name: "User8",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.758883,
+    longitude: 151.29547
+  },
+  {
+    message: "Ah, nothing",
+    name: "User9",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.729278,
+    longitude: 151.156728
+  },
+  {
+    message: "Ah, nothing",
+    name: "User9",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.729278,
+    longitude: 151.156728
+  },
+  {
+    message: "Ah, nothing",
+    name: "User10",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.71357,
+    longitude: 151.297816
+  },
+  {
+    message: "Ah, nothing",
+    name: "User10",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.71357,
+    longitude: 151.297816
+  },
+  {
+    message: "Ah, nothing",
+    name: "User11",
+    timestamp: 1611975812883,
+    room: "SEI40",
+    latitude: -33.636504,
+    longitude: 151.32903
+  },
+  {
+    message: "Ah, nothing",
+    name: "User11",
+    timestamp: 1611975812883,
+    room: "SEI40-Students",
+    latitude: -33.636504,
+    longitude: 151.32903
+  },
 ];
 
 mongoose.connect(connection_url,{
