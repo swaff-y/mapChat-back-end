@@ -116,6 +116,46 @@ const rooms = [
       {name: "User11", lastMessage: "Ah, nothing"},
     ],
   },
+  {
+    name: "Fishing",
+    lastMessage: "",
+    lastTimestamp: 1611975814321,
+    participants: [
+      {name: "User1", lastMessage: ""},
+    ],
+  },
+  {
+    name: "Company-XYZ",
+    lastMessage: "",
+    lastTimestamp: 1611975814321,
+    participants: [
+      {name: "User1", lastMessage: ""},
+    ],
+  },
+  {
+    name: "Best Buddies",
+    lastMessage: "",
+    lastTimestamp: 1611975814321,
+    participants: [
+      {name: "User1", lastMessage: ""},
+    ],
+  },
+  {
+    name: "Sydney Dive Sites",
+    lastMessage: "",
+    lastTimestamp: 1611975814321,
+    participants: [
+      {name: "User1", lastMessage: ""},
+    ],
+  },
+  {
+    name: "Sydney Walks",
+    lastMessage: "",
+    lastTimestamp: 1611975814321,
+    participants: [
+      {name: "User1", lastMessage: ""},
+    ],
+  },
 ];
 
 const messages = [
